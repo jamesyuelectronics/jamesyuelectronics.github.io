@@ -1,10 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Modern Minimalist Design Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fafafa;
+        }
+        header {
+            margin-bottom: 60px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 20px;
+        }
+        h1 { margin-bottom: 10px; color: #111; }
+        .subtitle { color: #666; font-size: 1.2rem; }
+        
+        /* Project Section Layout */
+        .project-card {
+            background: white;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .project-title { margin-top: 0; color: #0066cc; }
+        
+        /* Flexbox splits image and text side-by-side on wide screens */
+        .project-content {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .project-image {
+            flex: 1 1 300px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            object-fit: cover;
+        }
+        .project-text { flex: 2 1 350px; }
+        
+        /* Tags for tools/languages used */
+        .tags { margin-bottom: 15px; }
+        .tag {
+            background: #f1f8ff;
+            color: #0366d6;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 6px;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my brand new website.</p>
+
+    <header>
+        <h1>Your Name</h1>
+        <p class="subtitle">Welcome to my project portfolio website.</p>
+    </header>
+
+    <main>
+        <!-- PROJECT 1 -->
+        <section class="project-card">
+            <h2 class="project-title">Project One Title</h2>
+            <div class="tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-content">
+                <!-- Replace 'project1.jpg' with your actual uploaded image name later -->
+                <img src="project1.jpg" alt="Screenshot of Project 1" class="project-image">
+                <div class="project-text">
+                    <p><strong>What it is:</strong> Write a brief overview of your first project here. Explain what problem it solves and why you built it.</p>
+                    <p><strong>Key Features:</strong> Use this section to explain how it works. You can list the core functionalities or what you learned while making it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT 2 -->
+        <section class="project-card">
+            <h2 class="project-title">Project Two Title</h2>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+            </div>
+            <div class="project-content">
+                <!-- Replace 'project2.jpg' with your actual uploaded image name later -->
+                <img src="project2.jpg" alt="Screenshot of Project 2" class="project-image">
+                <div class="project-text">
+                    <p><strong>What it is:</strong> Write a brief overview of your second project here. Introduce the core concept of the project.</p>
+                    <p><strong>Key Features:</strong> Detail the special features, your design choices, or the technical hurdles you overcame.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
