@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>3-Phase BLDC Motor Control Board using PID Control</title>
+    <title>3-Phase BLDC Motor Control Board using PI Control</title>
 
     <style>
         body {
@@ -145,14 +145,17 @@
 
 
     <div class="item">
-        <img src="PID_firmware.jpg" alt="PID Firmware">
+        <img src="PI_firmware.png" alt="PI Firmware">
 
         <div class="description">
             <h2>PID Firmware</h2>
 
             <p>
-                The motor speed was controlled using a PID controller to
+                The motor speed was controlled using a PI controller to
                 achieve smooth motor operation.
+                The speed error is calculated every 1 ms from the target and measured RPM. 
+                The proportional and integral terms are then calculated and combined to generate the motor voltage reference, 
+                with the output limited to prevent exceeding the allowable control range.
                 <br><br>
 
                 The target motor speed and PID parameters can be adjusted
