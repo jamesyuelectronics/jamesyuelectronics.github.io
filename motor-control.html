@@ -3,40 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3-Phase BLDC Motor Control Board - Details</title>
+
+    <title>My Project</title>
+
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f5f5f5;
+            color: #222;
         }
-        .back-link { display: inline-block; margin-bottom: 20px; color: #0066cc; text-decoration: none; }
-        h1 { color: #111; margin-top: 0; }
-        .detail-section { background: white; border: 1px solid #e1e4e8; border-radius: 8px; padding: 30px; margin-bottom: 30px; }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* Each picture + description */
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 50px;
+
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        /* Left side image */
+        .item img {
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Right side explanation */
+        .description {
+            flex: 1;
+        }
+
+        .description h2 {
+            margin-top: 0;
+        }
+
+        .description p {
+            line-height: 1.6;
+        }
+
+        /* Makes it work better on phones */
+        @media (max-width: 700px) {
+            .item {
+                flex-direction: column;
+            }
+
+            .item img {
+                width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-    <a href="index.html" class="back-link">← Back to Portfolio</a>
+<div class="container">
 
-    <main class="detail-section">
-        <h1>3-Phase BLDC Motor Control Board using PID Control + Throttle</h1>
-        <p><em>Detailed Project Documentation</em></p>
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+    <h1>My Project</h1>
 
-        <h3>Project Overview</h3>
-        <p>Type your deep-dive overview here. Explain the hardware components, schematic design choices, and software implementation.</p>
+    <!-- Picture 1 -->
+    <div class="item">
 
-        <h3>PID Control Implementation</h3>
-        <p>Explain how you tuned your proportional, integral, and derivative gains to control the motor speed smoothly.</p>
+        <img src="images/picture1.jpg" alt="Picture 1">
 
-        <h3>Schematic & Layout Details</h3>
-        <p>Describe your layer stackup, power routing considerations for high currents, and how you handled signal noise.</p>
-    </main>
+        <div class="description">
+            <h2>Picture 1</h2>
+
+            <p>
+                Put your explanation for the first picture here.
+                You can explain what the picture shows, what you did,
+                and why it is important.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Picture 2 -->
+    <div class="item">
+
+        <img src="images/picture2.jpg" alt="Picture 2">
+
+        <div class="description">
+            <h2>Picture 2</h2>
+
+            <p>
+                Put your explanation for the second picture here.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Picture 3 -->
+    <div class="item">
+
+        <img src="images/picture3.jpg" alt="Picture 3">
+
+        <div class="description">
+            <h2>Picture 3</h2>
+
+            <p>
+                Put your explanation for the third picture here.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Picture 4 -->
+    <div class="item">
+
+        <img src="images/picture4.jpg" alt="Picture 4">
+
+        <div class="description">
+            <h2>Picture 4</h2>
+
+            <p>
+                Put your explanation for the fourth picture here.
+            </p>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
