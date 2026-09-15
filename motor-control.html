@@ -16,7 +16,8 @@
         }
 
         .container {
-            max-width: 1000px;
+            width: 90%;
+            max-width: 1500px;
             margin: auto;
         }
 
@@ -25,29 +26,27 @@
             margin-bottom: 50px;
         }
 
-        /* Each picture + description */
         .item {
-            display: flex;
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* image 2/3, text 1/3 */
             align-items: center;
             gap: 40px;
-            margin-bottom: 50px;
 
             background: white;
             padding: 25px;
+            margin-bottom: 50px;
             border-radius: 10px;
         }
 
-        /* Left side image */
         .item img {
-            width: 350px;
-            height: 250px;
-            object-fit: cover;
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
             border-radius: 8px;
         }
 
-        /* Right side explanation */
         .description {
-            flex: 1;
+            width: 100%;
         }
 
         .description h2 {
@@ -58,10 +57,9 @@
             line-height: 1.6;
         }
 
-        /* Makes it work better on phones */
         @media (max-width: 700px) {
             .item {
-                flex-direction: column;
+                grid-template-columns: 1fr;
             }
 
             .item img {
@@ -78,69 +76,51 @@
 
     <h1>My Project</h1>
 
-    <!-- Picture 1 -->
     <div class="item">
-
         <img src="images/picture1.jpg" alt="Picture 1">
 
         <div class="description">
             <h2>Picture 1</h2>
-
             <p>
                 Put your explanation for the first picture here.
-                You can explain what the picture shows, what you did,
-                and why it is important.
             </p>
         </div>
-
     </div>
 
 
-    <!-- Picture 2 -->
     <div class="item">
-
         <img src="images/picture2.jpg" alt="Picture 2">
 
         <div class="description">
             <h2>Picture 2</h2>
-
             <p>
                 Put your explanation for the second picture here.
             </p>
         </div>
-
     </div>
 
 
-    <!-- Picture 3 -->
     <div class="item">
-
         <img src="images/picture3.jpg" alt="Picture 3">
 
         <div class="description">
             <h2>Picture 3</h2>
-
             <p>
                 Put your explanation for the third picture here.
             </p>
         </div>
-
     </div>
 
 
-    <!-- Picture 4 -->
     <div class="item">
-
         <img src="images/picture4.jpg" alt="Picture 4">
 
         <div class="description">
             <h2>Picture 4</h2>
-
             <p>
                 Put your explanation for the fourth picture here.
             </p>
         </div>
-
     </div>
 
 </div>
