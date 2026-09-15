@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Project</title>
+    <title>3-Phase BLDC Motor Control Board using PID Control</title>
 
     <style>
         body {
@@ -74,51 +74,56 @@
 
 <div class="container">
 
-    <h1>My Project</h1>
+    <h1>3-Phase BLDC Motor Control Board using PID Control</h1>
 
     <div class="item">
-        <img src="images/picture1.jpg" alt="Picture 1">
+        <img src="images/powerschematic.jpg" alt="Picture 1">
 
         <div class="description">
-            <h2>Picture 1</h2>
+            <h2>Power schematic</h2>
             <p>
-                Put your explanation for the first picture here.
+                Using easyEDA, the schematics of the circuits were drawn. On the left is the Buck converter(top) and 12V->5V, 5V->3.3V LDOs(bottom). 
             </p>
         </div>
     </div>
 
 
     <div class="item">
-        <img src="images/picture2.jpg" alt="Picture 2">
+        <img src="images/driver+inverter.jpg" alt="Picture 2">
 
         <div class="description">
-            <h2>Picture 2</h2>
+            <h2>3 phase inverter schematic</h2>
             <p>
-                Put your explanation for the second picture here.
+                A 3 phase inverter was implemented to drive the BLDC motor, using a Gate Driver(left) and inverter(right, only 1 phase is shown). 
+                The gate driver received signals from the MCU and the output was connected to the inverter.<br>
+                The gate of the MOSFETs at the inverter have an additional resistor and diode in parallel with the resistor already in place to compensate for the slower turn off times,
+                At the MOSFETs, gate-source resistor and capacitor were added for pull-down and self-turn-on prevention. A capacitor was added between the ground and VDD to prevent sudden voltage spikes.
             </p>
         </div>
     </div>
 
 
     <div class="item">
-        <img src="images/picture3.jpg" alt="Picture 3">
+        <img src="images/pcb.jpg" alt="Picture 3">
 
         <div class="description">
-            <h2>Picture 3</h2>
+            <h2>PCB</h2>
             <p>
-                Put your explanation for the third picture here.
+                A PCB was drawn based on the schematic, including power supply, buck converter, LDOs, gate driver+3phase inverter, MCU and UART connection for a live visual feed of the motor's rpm.
+                A four layer structure was used, including two signal, GND and VCC layers. Unused MCU pins were routed out to headers for possible future use.
             </p>
         </div>
     </div>
 
 
     <div class="item">
-        <img src="images/picture4.jpg" alt="Picture 4">
+        <img src="images/PID firmware.jpg" alt="Picture 4">
 
         <div class="description">
-            <h2>Picture 4</h2>
+            <h2>PID firmware</h2>
             <p>
-                Put your explanation for the fourth picture here.
+                The motor control was based on PID controls, using PID controls to allow for smooth operation of the motor. The motor speed and PID variable values can be switched using the 
+                Live Expressions window in Debug mode, and the firmware for the PID control is shown on the left picture.
             </p>
         </div>
     </div>
