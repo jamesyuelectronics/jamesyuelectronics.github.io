@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>3-Phase BLDC Motor Control Board using PI Control</title>
+    <title>IoT Wireless Sensor board</title>
 
     <style>
         body {
@@ -105,88 +105,61 @@
 
     <a href="index.html" class="home-button">← Back to Home</a>
 
-    <h1>3-Phase BLDC Motor Control Board using PI Control</h1>
+    <h1>IoT Wireless sensor Board</h1>
 
     <div class="item">
-        <img src="powerschematic.png" alt="Power Schematic">
+        <img src="iot_schematic.png" alt="IoT Schematic">
 
         <div class="description">
-            <h2>Power Schematic</h2>
+            <h2>Circuit Schematic</h2>
 
             <p>
-                Using EasyEDA, the schematics of the circuits were drawn.
-                On the left is the buck converter (top), and the
-                12V-to-5V and 5V-to-3.3V LDOs are shown at the bottom.
+                Using PSPICE, the schematic of the circuit was drawn. The power supply goes through the voltage doubler and charges up the storage capacitor, and once it reaches a threshold
+                the autonomous switching circuit provides power to the rest of the circuit, and then automatically cuts off connection to start charging the storage capacitor again. 
             </p>
         </div>
     </div>
 
 
     <div class="item">
-        <img src="driver+inverter.png" alt="Gate Driver and Inverter">
+        <img src="iot-sensor+complete.png" alt="IoT Finished Solder">
 
         <div class="description">
-            <h2>3-Phase Inverter Schematic</h2>
+            <h2>Soldered view of completed board</h2>
 
             <p>
-                A 3-phase inverter was implemented to drive the BLDC motor,
-                using a gate driver on the left and the inverter on the right.
-                Only one inverter phase is shown.
-                <br><br>
-
-                The gate driver receives signals from the MCU and sends
-                the corresponding outputs to the inverter.
-                <br><br>
-
-                An additional resistor and diode were connected at the
-                MOSFET gate to compensate for slower turn-off times.
-                A gate-source resistor and capacitor were also added for
-                pull-down and self-turn-on prevention.
-                <br><br>
-
-                A capacitor was connected between VDD and ground to
-                reduce sudden voltage spikes.
+                Appropriate components were used to solder the whole board together. On the left is a top and bottom view of the finished soldered board.
             </p>
         </div>
     </div>
 
 
     <div class="item">
-        <img src="pcb.png" alt="PCB Layout">
+        <img src="iot-vigraph.png" alt="VI graph">
 
         <div class="description">
             <h2>PCB</h2>
 
             <p>
-                A PCB was designed based on the schematic, including the
-                power supply, buck converter, LDOs, gate driver,
-                3-phase inverter, MCU, and UART connection for live
-                monitoring of the motor RPM.
+                An oscilloscope was used to measure the storage capacitor voltage and current at the output of the LDO. With an input of AC voltage with 2.5V amplitude and 40Hz, 
+                the storage capacitor charges for a few seconds, and periodically sends a current signal to the MCU+Xbee to collect data, and then turns off again to charge.
                 <br><br>
-
-                A four-layer structure was used, consisting of two signal
-                layers, a GND layer, and a VCC layer.
-                <br><br>
-
-                Unused MCU pins were routed out to headers for possible
-                future use.
+                 This circuit is designed for low power source conditions(such as near power lines). 
+                 Even with small input power, paired with a 1:20 transformer and voltage doubler, the capacitor collects charge and operates the board even from very low power sources that
+                 are unstable.
             </p>
         </div>
     </div>
 
 
     <div class="item">
-        <img src="PI_firmware.png" alt="PI Firmware">
+        <img src="transmitted_data.png" alt="Sensing Data transmission">
 
         <div class="description">
-            <h2>PI Firmware</h2>
+            <h2>Data transmission</h2>
 
             <p>
-                The motor speed was controlled using a PI controller to
-                achieve smooth motor operation.
-                The speed error is calculated every 1 ms from the target and measured RPM. 
-                The proportional and integral terms are then calculated and combined to generate the motor voltage reference, 
-                with the output limited to prevent exceeding the allowable control range.
+                The 
               
             </p>
         </div>
