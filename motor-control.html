@@ -204,10 +204,14 @@
             <h2>Motor Operation</h2>
 
             <p>
-                A short demonstration of the BLDC motor operating under PI speed control. 
+                A demonstration of the BLDC motor operating under PI speed control. 
                 <br><br>
-                The target motor speed and PI parameters can be adjusted through the Live Expressions window while debugging.
-                The board transmits motor RPM data to a computer via UART, which is visualized in real time using Teleplot in VS Code.
+                The target motor speed and PI parameters can be adjusted through the Live Expressions window while debugging. The constants Kp and Ki are correspondant to the P and I terms
+                of the PI controller, and the desired RPM of the motor is set by RpmRef. 
+
+                <br><br>
+                The board transmits motor RPM data to a computer via UART, which is visualized in real time using Teleplot in VS Code(right side of the video). THe blue line indicates the 
+                reference set by the user, and the orange line shows the actual current rpm of the motor. 
             </p>
         </div>
     </div>
