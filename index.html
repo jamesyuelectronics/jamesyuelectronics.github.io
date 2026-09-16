@@ -15,15 +15,24 @@
             padding: 40px 20px;
             background-color: #fafafa;
         }
+
         header {
             text-align: center;
             margin-bottom: 60px;
             border-bottom: 2px solid #eaeaea;
             padding-bottom: 20px;
         }
-        h1 { margin-bottom: 10px; color: #111; }
-        .subtitle { color: #666; font-size: 1.2rem; }
-        
+
+        h1 {
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
         /* Project Section Layout */
         .project-card {
             background: white;
@@ -33,14 +42,19 @@
             margin-bottom: 40px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
-        .project-title { margin-top: 0; color: #0066cc; }
-        
+
+        .project-title {
+            margin-top: 0;
+            color: #0066cc;
+        }
+
         /* Flexbox splits image and text side-by-side on wide screens */
         .project-content {
             display: flex;
             gap: 24px;
             flex-wrap: wrap;
         }
+
         .project-image {
             flex: 1 1 300px;
             max-width: 100%;
@@ -49,10 +63,16 @@
             border: 1px solid #eee;
             object-fit: cover;
         }
-        .project-text { flex: 2 1 350px; }
-        
+
+        .project-text {
+            flex: 2 1 350px;
+        }
+
         /* Tags for tools/languages used */
-        .tags { margin-bottom: 15px; }
+        .tags {
+            margin-bottom: 15px;
+        }
+
         .tag {
             background: #f1f8ff;
             color: #0366d6;
@@ -64,6 +84,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -72,33 +93,76 @@
     </header>
 
     <main>
-       <!-- PROJECT 1 -->
-<a href="motor-control.html" style="text-decoration: none; color: inherit; display: block;">
-    <section class="project-card" style="cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
-        <h2 class="project-title" style="margin-top: 0; color: #0066cc;">3-Phase BLDC Motor Control Board using PI Control</h2>
-        
-        <div class="project-content">
-            <img src="project1.jpg" alt="Screenshot of Project 1" class="project-image">
-            <div class="project-text">
-                <p><strong>What it is:</strong> A PCB board designed to control a 3-phase BLDC motor, implementing an inverter, and utilising PI controls to control the motor. </p>
-            </div>
-        </div>
-    </section>
-</a>
+
+        <!-- PROJECT 1 -->
+        <a href="motor-control.html"
+           style="text-decoration: none; color: inherit; display: block;">
+
+            <section class="project-card"
+                     style="cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;"
+                     onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.08)';"
+                     onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+
+                <h2 class="project-title"
+                    style="margin-top: 0; color: #0066cc;">
+                    3-Phase BLDC Motor Control Board using PI Control
+                </h2>
+
+                <div class="project-content">
+
+                    <img src="project1.jpg"
+                         alt="Screenshot of Project 1"
+                         class="project-image">
+
+                    <div class="project-text">
+                        <p>
+                            <strong>What it is:</strong>
+                            A PCB board designed to control a 3-phase BLDC motor,
+                            implementing an inverter, and utilising PI controls
+                            to control the motor.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </a>
 
 
         <!-- PROJECT 2 -->
-        <section class="project-card">
-            <h2 class="project-title">IoT Wireless Sensor Board</h2>
-            </div>
-            <div class="project-content">
-                <!-- Replace 'project2.jpg' with your actual uploaded image name later -->
-                <img src="project2.jpg" alt="Screenshot of Project 2" class="project-image">
-                <div class="project-text">
-                    <p><strong>What it is:</strong> A low power board designed to sense, collect data and transmit it via a Zigbee module</p>
+        <a href="iot-sensor.html"
+           style="text-decoration: none; color: inherit; display: block;">
+
+            <section class="project-card"
+                     style="cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;"
+                     onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.08)';"
+                     onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+
+                <h2 class="project-title">
+                    IoT Wireless Sensor Board
+                </h2>
+
+                <div class="project-content">
+
+                    <img src="project2.jpg"
+                         alt="Screenshot of Project 2"
+                         class="project-image">
+
+                    <div class="project-text">
+                        <p>
+                            <strong>What it is:</strong>
+                            A low power board designed to sense, collect data
+                            and transmit it via a Zigbee module
+                        </p>
+                    </div>
+
                 </div>
-            </div>
-        </section>
+
+            </section>
+
+        </a>
+
     </main>
 
 </body>
