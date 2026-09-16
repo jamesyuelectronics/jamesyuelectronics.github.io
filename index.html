@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+
     <style>
         /* Modern Minimalist Design Styles */
         body {
@@ -41,6 +42,15 @@
             padding: 24px;
             margin-bottom: 40px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+            border-color: #0066cc;
         }
 
         .project-title {
@@ -66,6 +76,14 @@
 
         .project-text {
             flex: 2 1 350px;
+        }
+
+        .view-project {
+            display: inline-block;
+            margin-top: 15px;
+            color: #0066cc;
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
         /* Tags for tools/languages used */
@@ -98,13 +116,9 @@
         <a href="motor-control.html"
            style="text-decoration: none; color: inherit; display: block;">
 
-            <section class="project-card"
-                     style="cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;"
-                     onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.08)';"
-                     onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+            <section class="project-card">
 
-                <h2 class="project-title"
-                    style="margin-top: 0; color: #0066cc;">
+                <h2 class="project-title">
                     3-Phase BLDC Motor Control Board using PI Control
                 </h2>
 
@@ -115,12 +129,16 @@
                          class="project-image">
 
                     <div class="project-text">
+
                         <p>
                             <strong>What it is:</strong>
                             A PCB board designed to control a 3-phase BLDC motor,
                             implementing an inverter, and utilising PI controls
                             to control the motor.
                         </p>
+
+                        <span class="view-project">View Project →</span>
+
                     </div>
 
                 </div>
@@ -134,10 +152,7 @@
         <a href="iot-sensor.html"
            style="text-decoration: none; color: inherit; display: block;">
 
-            <section class="project-card"
-                     style="cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;"
-                     onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.08)';"
-                     onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+            <section class="project-card">
 
                 <h2 class="project-title">
                     IoT Wireless Sensor Board
@@ -150,11 +165,15 @@
                          class="project-image">
 
                     <div class="project-text">
+
                         <p>
                             <strong>What it is:</strong>
                             A low power board designed to sense, collect data
                             and transmit it via a Zigbee module
                         </p>
+
+                        <span class="view-project">View Project →</span>
+
                     </div>
 
                 </div>
